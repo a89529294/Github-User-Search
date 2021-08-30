@@ -1,1 +1,1 @@
-# Vite-React-Tailwind
+Tailwind + light/dark mode + vite
