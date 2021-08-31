@@ -51,7 +51,7 @@ function App() {
         searchStatus={searchStatus}
         setSearchStatus={setSearchStatus}
       />
-      <Card userInfo={userInfo} isDark={isDark} />
+      <Card userInfo={userInfo} />
     </div>
   );
 }

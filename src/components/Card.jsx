@@ -19,7 +19,7 @@ const MyLink = ({ Icon, text, url }) => (
   </div>
 );
 
-function Card({ userInfo, isDark }) {
+function Card({ userInfo }) {
   const {
     login,
     bio,
@@ -83,26 +83,21 @@ function Card({ userInfo, isDark }) {
         <div className="grid mt-6 gap-y-4 sm:grid-cols-2 sm:grid-rows-2">
           <div className={`flex ${!location && "opacity-50"}`}>
             <div className="w-9">
-              <LocationIcon fill={isDark ? "white" : ""} />
+              <LocationIcon />
             </div>
             <p className="text-sm font-normal leading-5 text-dark-blue dark:text-white">
               {location ? location : "Not Available"}
             </p>
           </div>
+          <MyLink Icon={<LinkIcon />} text={blog} alt="blog" url={blog} />
           <MyLink
-            Icon={<LinkIcon fill={isDark ? "white" : ""} />}
-            text={blog}
-            alt="blog"
-            url={blog}
-          />
-          <MyLink
-            Icon={<TwitterIcon fill={isDark ? "white" : ""} />}
+            Icon={<TwitterIcon />}
             text={twitter}
             alt="twitter"
             url={`http://twitter.com/${twitter}`}
           />
           <MyLink
-            Icon={<CompanyIcon fill={isDark ? "white" : ""} />}
+            Icon={<CompanyIcon />}
             text={company}
             alt="company"
             url={`https://github.com/${company?.substring(1)}`}
