@@ -37,8 +37,7 @@ function App() {
         });
         setSearchStatus("loaded");
       })
-      .catch((err) => {
-        console.log(err);
+      .catch(() => {
         setSearchStatus("error");
       });
   }, [searchTerm]);
